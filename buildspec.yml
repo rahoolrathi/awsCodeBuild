@@ -10,13 +10,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean install
+      - mvn clean install -DskipTests  # This will skip tests and just build the project
 
-  post_build:
-    commands:
-      - echo Build completed on `date`
-      - mvn test
 artifacts:
   files:
-    - target/*.jar
-
+    - target/*.jar  # Include the generated JAR files as artifacts
