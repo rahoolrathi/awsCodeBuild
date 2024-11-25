@@ -10,7 +10,6 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean install -DskipTests  # This will skip tests and just build the project
 
 artifacts:
   files:
